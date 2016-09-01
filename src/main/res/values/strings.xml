@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Profil</string>
+    <string name="my_name">4102 Muhammad Arizal Saputro</string>
+    <string name="info">Ini bukan username atau pin Anda. Nama ini akan ditampilkan ke kontak WhatsApp Anda.</string>
+    <string name="status_and_phone">Status dan telepon</string>
+    <string name="my_phone">+62 856-4103-0148</string>
+    <string name="last_seen">Terakhir dilihat 27/08/2016</string>
+</resources>
