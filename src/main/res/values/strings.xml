@@ -12,4 +12,10 @@
     <string name="take_picture">Camera</string>
     <string name="from_galerry">Galeri</string>
 
+    <string name="success_update">Photo berhasil dirubah</string>
+    <string name="undo">BATAL</string>
+    <string name="show_notif">Notifikasi</string>
+
+    <string name="clear">Hapus notif</string>
+
 </resources>

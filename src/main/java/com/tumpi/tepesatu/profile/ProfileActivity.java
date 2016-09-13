@@ -6,11 +6,13 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.tumpi.tepesatu.R;
@@ -23,12 +25,14 @@ public class ProfileActivity extends AppCompatActivity {
     private CircleImageView gambar;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     static final int REQUEST_IMAGE_GALERRY = 2;
+    private LinearLayout linearLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         gambar =(CircleImageView)findViewById(R.id.gambar);
+        linearLayout = (LinearLayout)findViewById(R.id.linear);
     }
 
     private boolean isSupportCamera(){
@@ -106,6 +110,15 @@ public class ProfileActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+
+        Snackbar snackbar = Snackbar.make(linearLayout,getString(R.string.success_update),Snackbar.LENGTH_LONG);
+        snackbar.setAction(getString(R.string.undo), new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gambar.setImageResource(R.drawable.arizal);
+            }
+        });
+        snackbar.show();
 
     }
 

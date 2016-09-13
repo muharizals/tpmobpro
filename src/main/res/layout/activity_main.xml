@@ -4,14 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
     android:layout_height="match_parent">
 
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_open"
         android:id="@+id/button"
         android:onClick="openProfile"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_gravity="center_vertical" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/show_notif"
+        android:id="@+id/button2"
+        android:onClick="showNotif"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_gravity="center_vertical" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:id="@+id/button3"
+        android:onClick="clearNotif"
         android:layout_gravity="center_vertical" />
 </LinearLayout>
