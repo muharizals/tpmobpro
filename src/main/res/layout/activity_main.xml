@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="@dimen/activity_horizontal_margin"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/imageView"
+        android:visibility="gone"
+        android:src="@drawable/arizal"
+        android:layout_gravity="center_horizontal" />
+
+    <com.tumpi.tepesatu.view.RingProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        app:max="100"
+        app:ringColor="@color/colorPrimary"
+        app:ringProgressColor="@color/colorPrimaryDark"
+        app:ringWidth="3dp"
+        app:style="FILL"
+        app:textColor="@color/colorPrimary"
+        app:textIsShow="true"
+        app:textSize="16sp"
+        android:layout_gravity="center_horizontal" />
 
 
     <Button
@@ -15,6 +38,7 @@
         android:text="@string/button_open"
         android:id="@+id/button"
         android:onClick="openProfile"
+        android:layout_marginTop="40dp"
         style="@style/Base.Widget.AppCompat.Button.Borderless"
         android:layout_gravity="center_vertical" />
 
